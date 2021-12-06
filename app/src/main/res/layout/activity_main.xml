@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     android:text="BlackWhite"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -68,7 +68,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
                     android:text="ColorShifts"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -104,7 +104,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
                     android:text="Cyberpunk"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -132,7 +132,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
                     android:text="Defocusing"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -168,7 +168,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
                     android:text="Rainbow"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -196,7 +196,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
                     android:text="//"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>

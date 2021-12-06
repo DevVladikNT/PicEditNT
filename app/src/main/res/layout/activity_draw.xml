@@ -23,4 +23,36 @@
 
     </HorizontalScrollView>
 
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Pick image"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:onClick="pickImage"
+            android:background="@drawable/buttons_style_p"/>
+
+        <TextView
+            android:text="Get result"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:onClick="processImage"
+            android:background="@drawable/buttons_style_p"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
