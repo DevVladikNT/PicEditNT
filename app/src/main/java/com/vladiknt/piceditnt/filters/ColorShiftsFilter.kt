@@ -1,7 +1,12 @@
+package com.vladiknt.piceditnt.filters
+
 import android.graphics.Bitmap
 import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 object ColorShiftsFilter {
     private lateinit var result: Bitmap
