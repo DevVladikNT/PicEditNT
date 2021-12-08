@@ -183,7 +183,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/StandartTheme"
+                    android:id="@+id/CircleGeneration"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -195,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
                     android:padding="4dp"
-                    android:text="//"
+                    android:text="Generation"
                     android:gravity="center"
                     android:textSize="20sp" />
 

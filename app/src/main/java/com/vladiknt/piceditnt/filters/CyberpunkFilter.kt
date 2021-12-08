@@ -7,6 +7,7 @@ import androidx.core.graphics.set
 
 object CyberpunkFilter {
     private lateinit var image: Bitmap
+    private lateinit var current: Bitmap
 
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
@@ -17,6 +18,7 @@ object CyberpunkFilter {
     }
 
     private fun render() {
+        current = image
         for (i in 2 until image.width - 2) {
             for (j in 2 until image.height - 2) {
                 val p1 = image[i - 1, j]
@@ -32,13 +34,15 @@ object CyberpunkFilter {
                 val p11 = image[i, j - 2]
                 val p12 = image[i - 2, j]
                 val color = (p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12) / 12
-                image[i, j] = color
+                current[i, j] = color
             }
         }
+        image = current
     }
 
     private fun blur() {
-        repeat(30) {
+        current = image
+        repeat(15) {
             for (i in 2 until image.width - 2) {
                 for (j in 2 until image.height - 2) {
                     val p1 = image[i - 1, j]
@@ -60,9 +64,10 @@ object CyberpunkFilter {
                         (Color.green(p1) + Color.green(p2) + Color.green(p3) + Color.green(p4) + Color.green(p5) + Color.green(p6) + Color.green(p7) + Color.green(p8) + Color.green(p9) + Color.green(p10) + Color.green(p11) + Color.green(p12)) / 12,
                         (Color.blue(p1) + Color.blue(p2) + Color.blue(p3) + Color.blue(p4) + Color.blue(p5) + Color.blue(p6) + Color.blue(p7) + Color.blue(p8) + Color.blue(p9) + Color.blue(p10) + Color.blue(p11) + Color.blue(p12)) / 12,
                     )
-                    image[i, j] = color
+                    current[i, j] = color
                 }
             }
+            image = current
         }
     }
 }

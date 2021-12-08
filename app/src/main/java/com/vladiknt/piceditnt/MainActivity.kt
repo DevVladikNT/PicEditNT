@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val act = Intent(this, DrawActivity::class.java)
         val filterName = when (view!!.id) {
             R.id.BlackWhite -> "BlackWhite"
+            R.id.CircleGeneration -> "CircleGeneration"
             R.id.ColorShifts -> "ColorShifts"
             R.id.Cyberpunk -> "Cyberpunk"
             R.id.Defocusing -> "Defocusing"

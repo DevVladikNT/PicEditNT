@@ -30,7 +30,8 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="Pick image"
+            android:id="@+id/ChooseButton"
+            android:text="Choose"
             android:gravity="center"
             android:textSize="20sp"
             android:elevation="4dp"
@@ -42,7 +43,7 @@
             android:background="@drawable/buttons_style_p"/>
 
         <TextView
-            android:text="Get result"
+            android:text="Process"
             android:gravity="center"
             android:textSize="20sp"
             android:elevation="4dp"
@@ -51,6 +52,18 @@
             android:layout_weight="1"
             android:layout_height="50dp"
             android:onClick="processImage"
+            android:background="@drawable/buttons_style_p"/>
+
+        <TextView
+            android:text="Save"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:onClick="saveImage"
             android:background="@drawable/buttons_style_p"/>
 
     </LinearLayout>
