@@ -12,17 +12,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.vladiknt.piceditnt.filters.BlackWhiteFilter
-import com.vladiknt.piceditnt.filters.CircleGeneration
-import com.vladiknt.piceditnt.filters.ColorShiftsFilter
-import com.vladiknt.piceditnt.filters.CyberpunkFilter
+import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
 import java.io.FileNotFoundException
 import java.io.InputStream
 
 
 class DrawActivity : AppCompatActivity() {
-    var scale = 4
+    var scale = 1
     private var selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,8 +59,8 @@ class DrawActivity : AppCompatActivity() {
                         "CircleGeneration" -> CircleGeneration.make()
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
-                        //"Defocusing" ->
-                        //"Rainbow" ->
+                        "Defocusing" -> DefocusingFilter.make(scaledSelectedImage)
+                        "Rainbow" -> RainbowFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }
                 }

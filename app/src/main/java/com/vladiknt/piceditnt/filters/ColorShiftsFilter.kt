@@ -19,7 +19,7 @@ object ColorShiftsFilter {
     }
 
     private fun render() {
-        repeat(10) {
+        repeat(5) {
             for (i in 1 until result.width) {
                 for (j in 1 until result.height) {
                     val pixel = result[i, j]

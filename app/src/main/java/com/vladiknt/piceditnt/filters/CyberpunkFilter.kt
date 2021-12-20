@@ -42,7 +42,7 @@ object CyberpunkFilter {
 
     private fun blur() {
         current = image
-        repeat(15) {
+        repeat(5) {
             for (i in 2 until image.width - 2) {
                 for (j in 2 until image.height - 2) {
                     val p1 = image[i - 1, j]

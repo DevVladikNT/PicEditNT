@@ -2,20 +2,9 @@ package com.vladiknt.piceditnt
 
 import android.app.ActivityOptions
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.get
-import androidx.core.graphics.set
-import androidx.core.graphics.toColor
-import java.io.FileNotFoundException
-import java.io.InputStream
 
 
 class MainActivity : AppCompatActivity() {
