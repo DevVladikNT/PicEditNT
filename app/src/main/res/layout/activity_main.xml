@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="?attr/colorPrimaryVariant" >
+    android:background="?attr/colorPrimaryVariant"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,58 +19,58 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/black_white"
                     android:id="@+id/BlackWhite"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/black_white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="BlackWhite"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/color_shifts"
                     android:id="@+id/ColorShifts"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/color_shifts" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="ColorShifts"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -84,59 +84,59 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/cyberpunk"
                     android:id="@+id/Cyberpunk"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/cyberpunk" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="Cyberpunk"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/defocusing"
                     android:id="@+id/Defocusing"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/defocusing" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="Defocusing"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -150,59 +150,59 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/rainbow"
                     android:id="@+id/Rainbow"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/rainbow" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="Rainbow"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_info_bottom"
+                android:elevation="4dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:src="@drawable/circle_generation"
                     android:id="@+id/CircleGeneration"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:onClick="setFilter" />
+                    android:src="@drawable/circle_generation" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
+                    android:gravity="center"
                     android:padding="4dp"
                     android:text="Generation"
-                    android:gravity="center"
                     android:textSize="20sp" />
 
             </LinearLayout>

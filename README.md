@@ -9,6 +9,8 @@ It has some filters:
 - Defocusing
 - Rainbow
 
+Moreover, it has random picture generation.
+
 ### Others
 
 You need Android v8.0 and higher on mobile for correct work.<br>
