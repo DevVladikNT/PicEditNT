@@ -9,7 +9,7 @@ It has some filters:
 - Defocusing
 - Rainbow
 
-Moreover, it has random picture generation.
+Moreover, you can setup your own filter.
 
 ### Others
 

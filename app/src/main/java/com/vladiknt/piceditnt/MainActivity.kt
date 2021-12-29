@@ -18,15 +18,19 @@ class MainActivity : AppCompatActivity() {
         val act = Intent(this, DrawActivity::class.java)
         val filterName = when (view!!.id) {
             R.id.BlackWhite -> "BlackWhite"
-            R.id.CircleGeneration -> "CircleGeneration"
             R.id.ColorShifts -> "ColorShifts"
             R.id.Cyberpunk -> "Cyberpunk"
             R.id.Defocusing -> "Defocusing"
-            R.id.Rainbow -> "Rainbow"
+            R.id.MyFilter -> "My"
+            //R.id.Rainbow -> "Rainbow"
             else -> ""
         }
         act.putExtra("filterName", filterName)
         startActivity(act, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
+    fun myFilterSettingsButton(view: View?) {
+        val intent = Intent(this, MyFilterSettingsActivity::class.java)
+        startActivity(intent)
+    }
 }

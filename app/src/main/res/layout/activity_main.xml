@@ -159,7 +159,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/Rainbow"
+                    android:id="@+id/MyFilter"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -173,7 +173,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="Rainbow"
+                    android:text="MyFilter"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -192,7 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:onClick="setFilter"
+                    android:onClick="myFilterSettingsButton"
                     android:scaleType="centerCrop"
                     android:src="@drawable/circle_generation" />
 
@@ -202,7 +202,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="Generation"
+                    android:text="MyFilterSet"
                     android:textSize="20sp" />
 
             </LinearLayout>

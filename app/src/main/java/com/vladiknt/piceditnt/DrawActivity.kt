@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore.Images
 import android.util.Log
 import android.view.View
@@ -14,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
+import java.io.File
 import java.io.FileNotFoundException
 import java.io.InputStream
 
@@ -27,6 +29,10 @@ class DrawActivity : AppCompatActivity() {
         setContentView(R.layout.activity_draw)
         if (intent.extras!!["filterName"] == "CircleGeneration")
             findViewById<TextView>(R.id.ChooseButton).visibility = View.GONE
+        // todo
+        CoroutineScope(Dispatchers.Default).async {
+            MyFilterSettings.loadInfo(File(Environment.getDataDirectory(), MyFilterSettings.file))
+        }
     }
 
     fun pickImage(view: View?) {
@@ -56,11 +62,11 @@ class DrawActivity : AppCompatActivity() {
                 withContext(Dispatchers.Default) {
                     selectedImage = when (intent.extras!!["filterName"]) {
                         "BlackWhite" -> BlackWhiteFilter.make(scaledSelectedImage)
-                        "CircleGeneration" -> CircleGeneration.make()
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
                         "Defocusing" -> DefocusingFilter.make(scaledSelectedImage)
-                        "Rainbow" -> RainbowFilter.make(scaledSelectedImage)
+                        "My" -> MyFilter.make(scaledSelectedImage)
+                        //"Rainbow" -> RainbowFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }
                 }
