@@ -11,7 +11,6 @@ object MyFilter {
 
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
-        input.recycle()
         render()
         return image
     }

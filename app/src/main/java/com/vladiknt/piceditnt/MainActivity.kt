@@ -21,16 +21,11 @@ class MainActivity : AppCompatActivity() {
             R.id.ColorShifts -> "ColorShifts"
             R.id.Cyberpunk -> "Cyberpunk"
             R.id.Defocusing -> "Defocusing"
+            R.id.Circuit -> "Circuit"
             R.id.MyFilter -> "My"
-            //R.id.Rainbow -> "Rainbow"
             else -> ""
         }
         act.putExtra("filterName", filterName)
         startActivity(act, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-    }
-
-    fun myFilterSettingsButton(view: View?) {
-        val intent = Intent(this, MyFilterSettingsActivity::class.java)
-        startActivity(intent)
     }
 }

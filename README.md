@@ -7,7 +7,6 @@ It has some filters:
 - ColorShifts
 - Cyberpunk
 - Defocusing
-- Rainbow
 
 Moreover, you can setup your own filter.
 

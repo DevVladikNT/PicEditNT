@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.scale
 import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
 import java.io.File
@@ -27,12 +28,17 @@ class DrawActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_draw)
-        if (intent.extras!!["filterName"] == "CircleGeneration")
-            findViewById<TextView>(R.id.ChooseButton).visibility = View.GONE
+        if (intent.extras!!["filterName"] == "My")
+            findViewById<TextView>(R.id.MyFilterEdit).visibility = View.VISIBLE
         // todo
         CoroutineScope(Dispatchers.Default).async {
             MyFilterSettings.loadInfo(File(Environment.getDataDirectory(), MyFilterSettings.file))
         }
+    }
+
+    fun myFilterSettingsButton(view: View?) {
+        val intent = Intent(this, MyFilterSettingsActivity::class.java)
+        startActivity(intent)
     }
 
     fun pickImage(view: View?) {
@@ -42,17 +48,9 @@ class DrawActivity : AppCompatActivity() {
     }
 
     fun processImage(view: View?) {
-        if (selectedImage.height == 1 && intent.extras!!["filterName"] != "CircleGeneration") {
-            Toast.makeText(this, "Pick image firstly", Toast.LENGTH_SHORT).show()
-            return
-        }
-        if (intent.extras!!["filterName"] == "CircleGeneration") selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
         try {
             val imageView = findViewById<ImageView>(R.id.imageSrc)
-            var scaledSelectedImage = selectedImage
-            if (intent.extras!!["filterName"] != "CircleGeneration") {
-                scaledSelectedImage = Bitmap.createScaledBitmap(selectedImage, selectedImage.width / scale, selectedImage.height / scale, false)
-            }
+            var scaledSelectedImage = selectedImage.scale(selectedImage.width/scale, selectedImage.height/scale)
             Toast.makeText(this, "Wait please", Toast.LENGTH_SHORT).show()
             // Обрабатываем изображение
             val time = System.currentTimeMillis()
@@ -65,8 +63,8 @@ class DrawActivity : AppCompatActivity() {
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
                         "Defocusing" -> DefocusingFilter.make(scaledSelectedImage)
+                        "Circuit" -> CircuitFilter.make(scaledSelectedImage)
                         "My" -> MyFilter.make(scaledSelectedImage)
-                        //"Rainbow" -> RainbowFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }
                 }

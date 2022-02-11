@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/settingsImageSrc"
-        android:src="@drawable/original"
-        android:layout_width="wrap_content"
+        android:src="@drawable/original_scaled"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:layout_above="@id/settingsPad"/>

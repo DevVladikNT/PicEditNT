@@ -11,7 +11,6 @@ object DefocusingFilter {
 
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
-        input.recycle()
         smallBlur()
         render()
         return image

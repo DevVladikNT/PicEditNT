@@ -159,13 +159,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/MyFilter"
+                    android:id="@+id/Circuit"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/rainbow" />
+                    android:src="@drawable/circuit" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -173,7 +173,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="MyFilter"
+                    android:text="Circuit"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -188,13 +188,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/CircleGeneration"
+                    android:id="@+id/MyFilter"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:onClick="myFilterSettingsButton"
+                    android:onClick="setFilter"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/circle_generation" />
+                    android:src="@drawable/my_filter" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -202,7 +202,7 @@
                     android:background="@drawable/rounded_info_bottom"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="MyFilterSet"
+                    android:text="MyFilter"
                     android:textSize="20sp" />
 
             </LinearLayout>

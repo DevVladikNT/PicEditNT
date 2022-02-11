@@ -13,7 +13,6 @@ object ColorShiftsFilter {
 
     fun make(input: Bitmap): Bitmap {
         result = input.copy(input.config, true)
-        input.recycle()
         render()
         return result
     }

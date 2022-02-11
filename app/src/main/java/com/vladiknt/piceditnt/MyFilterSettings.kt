@@ -4,15 +4,15 @@ import android.util.Log
 import java.io.*
 
 object MyFilterSettings {
-    var kRedLow = 0
-    var kGreenLow = 0
-    var kBlueLow = 0
-    var kRedMiddle = 0
-    var kGreenMiddle = 0
-    var kBlueMiddle = 0
-    var kRedHigh = 0
-    var kGreenHigh = 0
-    var kBlueHigh = 0
+    var kRedLow = 64
+    var kGreenLow = 64
+    var kBlueLow = 64
+    var kRedMiddle = 96
+    var kGreenMiddle = 96
+    var kBlueMiddle = 96
+    var kRedHigh = 128
+    var kGreenHigh = 128
+    var kBlueHigh = 128
     var file = "myFilterData.txt"
     var hasFile = false
 
