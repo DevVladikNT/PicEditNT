@@ -7,6 +7,7 @@ It has some filters:
 - ColorShifts
 - Cyberpunk
 - Defocusing
+- Circuiting image
 
 Moreover, you can setup your own filter.
 

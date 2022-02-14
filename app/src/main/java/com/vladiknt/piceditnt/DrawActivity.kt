@@ -30,10 +30,7 @@ class DrawActivity : AppCompatActivity() {
         setContentView(R.layout.activity_draw)
         if (intent.extras!!["filterName"] == "My")
             findViewById<TextView>(R.id.MyFilterEdit).visibility = View.VISIBLE
-        // todo
-        CoroutineScope(Dispatchers.Default).async {
-            MyFilterSettings.loadInfo(File(Environment.getDataDirectory(), MyFilterSettings.file))
-        }
+        MyFilterSettingsActivity.loadInfo()
     }
 
     fun myFilterSettingsButton(view: View?) {
