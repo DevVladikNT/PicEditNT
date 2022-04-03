@@ -7,208 +7,276 @@
     android:background="?attr/colorPrimaryVariant"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/BlackWhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
                     android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/black_white" />
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="BlackWhite"
-                    android:textSize="20sp" />
+                    <ImageView
+                        android:id="@+id/BlackWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/black_white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="BlackWhite"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Circuit"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/circuit" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Circuit"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/ColorShifts"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
                     android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/color_shifts" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/rounded_info_bottom"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="ColorShifts"
-                    android:textSize="20sp" />
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ColorShifts"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/color_shifts" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="ColorShifts"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Defocusing"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/defocusing" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Defocusing"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Cyberpunk"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cyberpunk" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Cyberpunk"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Pixel"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pixel"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Pixel"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/sdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="sdf"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_info_bottom"
+                    android:elevation="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/MyFilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="setFilter"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_filter" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="MyFilter"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/Cyberpunk"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/cyberpunk" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="Cyberpunk"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/Defocusing"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/defocusing" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="Defocusing"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/Circuit"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/circuit" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="Circuit"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_info_bottom"
-                android:elevation="4dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/MyFilter"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:onClick="setFilter"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/my_filter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:gravity="center"
-                    android:padding="4dp"
-                    android:text="MyFilter"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

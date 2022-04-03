@@ -22,7 +22,7 @@ import java.io.InputStream
 
 
 class DrawActivity : AppCompatActivity() {
-    var scale = 1
+    var scale = 4
     private var selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,11 +57,12 @@ class DrawActivity : AppCompatActivity() {
                 withContext(Dispatchers.Default) {
                     selectedImage = when (intent.extras!!["filterName"]) {
                         "BlackWhite" -> BlackWhiteFilter.make(scaledSelectedImage)
+                        "Circuit" -> CircuitFilter.make(scaledSelectedImage)
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
                         "Defocusing" -> DefocusingFilter.make(scaledSelectedImage)
-                        "Circuit" -> CircuitFilter.make(scaledSelectedImage)
                         "My" -> MyFilter.make(scaledSelectedImage)
+                        "Pixel" -> PixelFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }
                 }
