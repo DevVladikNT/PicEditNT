@@ -10,6 +10,6 @@
     <color name="nightColorAccent">#FFAAAAAA</color>
     <color name="nightColorText">#FFAAAAAA</color>
 
-    <color name="trueAnswer">#9ccc65</color>
-    <color name="falseAnswer">#ef5350</color>
+    <color name="correct">#9ccc65</color>
+    <color name="incorrect">#ef5350</color>
 </resources>

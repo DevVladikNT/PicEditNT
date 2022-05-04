@@ -1,0 +1,52 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.vladiknt.piceditnt.filters////PointingToDeclaration/app/com.vladiknt.piceditnt.filters/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/BlackWhiteFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-black-white-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/BlackWhiteFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-black-white-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/CircuitFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-circuit-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/CircuitFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-circuit-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/ColorShiftsFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-color-shifts-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/ColorShiftsFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-color-shifts-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/CyberpunkFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-cyberpunk-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/CyberpunkFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-cyberpunk-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/DefocusingFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-defocusing-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/DefocusingFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-defocusing-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/MyFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-my-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/MyFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-my-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/PixelFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-pixel-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/PixelFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-pixel-filter/make.html
+$dokka.location:com.vladiknt.piceditnt.filters/RainbowFilter///PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-rainbow-filter/index.html
+$dokka.location:com.vladiknt.piceditnt.filters/RainbowFilter/make/#android.graphics.Bitmap/PointingToDeclaration/app/com.vladiknt.piceditnt.filters/-rainbow-filter/make.html
+$dokka.location:com.vladiknt.piceditnt////PointingToDeclaration/app/com.vladiknt.piceditnt/index.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity///PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/index.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/DrawActivity/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/-draw-activity.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/myFilterSettingsButton/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/my-filter-settings-button.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/pickImage/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/pick-image.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/processImage/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/process-image.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/saveImage/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/save-image.html
+$dokka.location:com.vladiknt.piceditnt/DrawActivity/scale/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-draw-activity/scale.html
+$dokka.location:com.vladiknt.piceditnt/MainActivity///PointingToDeclaration/app/com.vladiknt.piceditnt/-main-activity/index.html
+$dokka.location:com.vladiknt.piceditnt/MainActivity/MainActivity/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-main-activity/-main-activity.html
+$dokka.location:com.vladiknt.piceditnt/MainActivity/setFilter/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-main-activity/set-filter.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion///PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/index.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/APP_PREFERENCES/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/-a-p-p_-p-r-e-f-e-r-e-n-c-e-s.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kBlueHigh/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-blue-high.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kBlueLow/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-blue-low.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kBlueMiddle/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-blue-middle.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kGreenHigh/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-green-high.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kGreenLow/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-green-low.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kGreenMiddle/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-green-middle.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kRedHigh/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-red-high.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kRedLow/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-red-low.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/kRedMiddle/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/k-red-middle.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/loadInfo/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/load-info.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity.Companion/pref/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-companion/pref.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity///PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/index.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity/MyFilterSettingsActivity/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/-my-filter-settings-activity.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity/active/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/active.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity/processing/#/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/processing.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity/resetInfo/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/reset-info.html
+$dokka.location:com.vladiknt.piceditnt/MyFilterSettingsActivity/saveInfo/#android.view.View?/PointingToDeclaration/app/com.vladiknt.piceditnt/-my-filter-settings-activity/save-info.html
+com.vladiknt.piceditnt
+com.vladiknt.piceditnt.filters
+

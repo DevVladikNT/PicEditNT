@@ -5,10 +5,22 @@ import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 
+/**
+ * Фильтр киберпанк.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object CyberpunkFilter {
+    /** Поле изображение */
     private lateinit var image: Bitmap
+    /** Поле промежуточное изображение */
     private lateinit var current: Bitmap
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         blur()
@@ -16,6 +28,9 @@ object CyberpunkFilter {
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         current = image
         for (i in 2 until image.width - 2) {
@@ -39,6 +54,9 @@ object CyberpunkFilter {
         image = current
     }
 
+    /**
+     * Функция размытия изображения.
+     */
     private fun blur() {
         current = image
         repeat(5) {

@@ -5,16 +5,29 @@ import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 
+/**
+ * Радужный фильтр.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object RainbowFilter {
-
+    /** Поле изображение */
     private lateinit var image: Bitmap
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         render()
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         val heightStrip = image.height / 6
         for (i in 0 until image.width) {

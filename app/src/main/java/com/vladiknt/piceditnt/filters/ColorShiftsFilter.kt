@@ -8,15 +8,29 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlin.coroutines.coroutineContext
 
+/**
+ * Фильтр сдвига цветов.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object ColorShiftsFilter {
+    /** Поле изображение */
     private lateinit var result: Bitmap
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         result = input.copy(input.config, true)
         render()
         return result
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         repeat(5) {
             for (i in 1 until result.width) {

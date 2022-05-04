@@ -2,59 +2,79 @@ package com.vladiknt.piceditnt.filters
 
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.util.Log
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 import kotlin.math.pow
 import kotlin.math.sqrt
 
+/**
+ * Пиксельный фильтр.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object PixelFilter {
+    /** Поле изображение */
     private lateinit var image: Bitmap
+    /** Поле массив цветов */
     private val colors = arrayListOf(
-            Color.argb(255, 0, 0, 0),
-            Color.argb(255, 34, 32, 52),
-            Color.argb(255, 69, 40, 60),
-            Color.argb(255, 102, 57, 49),
-            Color.argb(255, 143, 86, 59),
-            Color.argb(255, 223, 113, 38),
+        Color.argb(255, 0, 0, 0),
+        Color.argb(255, 34, 32, 52),
+        Color.argb(255, 69, 40, 60),
+        Color.argb(255, 102, 57, 49),
+        Color.argb(255, 143, 86, 59),
+        Color.argb(255, 223, 113, 38),
 
-            Color.argb(255, 217, 160, 102),
-            Color.argb(255, 238, 195, 154),
-            Color.argb(255, 251, 242, 54),
-            Color.argb(255, 153, 229, 80),
-            Color.argb(255, 105, 190, 48),
-            Color.argb(255, 55, 148, 110),
+        Color.argb(255, 217, 160, 102),
+        Color.argb(255, 238, 195, 154),
+        Color.argb(255, 251, 242, 54),
+        Color.argb(255, 153, 229, 80),
+        Color.argb(255, 105, 190, 48),
+        Color.argb(255, 55, 148, 110),
 
-            Color.argb(255, 75, 105, 47),
-            Color.argb(255, 82, 75, 35),
-            Color.argb(255, 50, 60, 57),
-            Color.argb(255, 63, 63, 115),
-            Color.argb(255, 48, 96, 130),
+        Color.argb(255, 75, 105, 47),
+        Color.argb(255, 82, 75, 35),
+        Color.argb(255, 50, 60, 57),
+        Color.argb(255, 63, 63, 115),
+        Color.argb(255, 48, 96, 130),
 
-            Color.argb(255, 91, 110, 225),
-            Color.argb(255, 99, 155, 255),
-            Color.argb(255, 94, 206, 228),
-            Color.argb(255, 203, 219, 252),
-            Color.argb(255, 255, 255, 255),
+        Color.argb(255, 91, 110, 225),
+        Color.argb(255, 99, 155, 255),
+        Color.argb(255, 94, 206, 228),
+        Color.argb(255, 203, 219, 252),
+        Color.argb(255, 255, 255, 255),
 
-            Color.argb(255, 155, 173, 183),
-            Color.argb(255, 132, 126, 135),
-            Color.argb(255, 105, 106, 106),
-            Color.argb(255, 88, 86, 82),
-            Color.argb(255, 118, 65, 138),
+        Color.argb(255, 155, 173, 183),
+        Color.argb(255, 132, 126, 135),
+        Color.argb(255, 105, 106, 106),
+        Color.argb(255, 88, 86, 82),
+        Color.argb(255, 118, 65, 138),
 
-            Color.argb(255, 172, 50, 50),
-            Color.argb(255, 218, 87, 99),
-            Color.argb(255, 216, 122, 186),
-            Color.argb(255, 142, 151, 74),
-            Color.argb(255, 138, 111, 48)
+        Color.argb(255, 172, 50, 50),
+        Color.argb(255, 218, 87, 99),
+        Color.argb(255, 216, 122, 186),
+        Color.argb(255, 142, 151, 74),
+        Color.argb(255, 138, 111, 48),
+
+        Color.argb(255, 171, 132, 91)
     )
+    /** Поле количество "сжиманий изображения" */
+    private var scaleTimes = 1
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         render()
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         for (i in 0 until image.width) {
             for (j in 0 until image.height) {
@@ -77,9 +97,28 @@ object PixelFilter {
             }
         }
         image = scaling(image)
+
+        Log.d("Debb", "$scaleTimes")
+        val upscaledImage = Bitmap.createBitmap(image.width * scaleTimes, image.height * scaleTimes, Bitmap.Config.ARGB_8888)
+        for (i in 0 until image.width) {
+            for (j in 0 until image.height) {
+                for (k in 0 until scaleTimes) {
+                    for (z in 0 until scaleTimes) {
+                        upscaledImage[i * scaleTimes + k, j * scaleTimes + z] = image[i, j]
+                    }
+                }
+            }
+        }
+        image = upscaledImage
     }
 
+    /**
+     * Функция масштабирования изображения.
+     * @param input входящее изображение
+     * @return масштабированное изображение
+     */
     private fun scaling(input: Bitmap): Bitmap {
+        scaleTimes++
         val scalingImage = Bitmap.createBitmap(input.width/2, input.height/2, Bitmap.Config.ARGB_8888)
         for (i in 0 until input.width/2) {
             for (j in 0 until input.height/2) {

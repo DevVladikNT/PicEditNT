@@ -5,10 +5,22 @@ import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 
+/**
+ * Фильтр расфокусировки.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object DefocusingFilter {
+    /** Поле изображение */
     private lateinit var image: Bitmap
+    /** Поле промежуточное изображение */
     private lateinit var current: Bitmap
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         smallBlur()
@@ -16,6 +28,9 @@ object DefocusingFilter {
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         val shift = if (image.height < image.width) image.height / 120 else image.width / 120
         for (i in shift until image.width - shift) {
@@ -36,6 +51,9 @@ object DefocusingFilter {
         image = current
     }
 
+    /**
+     * Функция слабого размытия изображения.
+     */
     private fun smallBlur() {
         current = image
         for (i in 2 until image.width - 2) {

@@ -7,11 +7,24 @@ import androidx.core.graphics.get
 import androidx.core.graphics.set
 import kotlin.math.abs
 
+/**
+ * Фильтр выделения контуров.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object CircuitFilter {
+    /** Поле изображение */
     private lateinit var image: Bitmap
+    /** Поле промежуточное изображение */
     private lateinit var current: Bitmap
+    /** Поле чувствительность */
     private val ACCURACY = 15
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         current = input.copy(input.config, true)
@@ -20,6 +33,9 @@ object CircuitFilter {
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         // Horizontal
         for (i in 0 until image.width - 2) {
@@ -56,6 +72,9 @@ object CircuitFilter {
         }
     }
 
+    /**
+     * Функция размытия изображения.
+     */
     private fun blur() {
         current = image
         repeat(1) {

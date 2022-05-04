@@ -6,15 +6,29 @@ import androidx.core.graphics.get
 import androidx.core.graphics.set
 import com.vladiknt.piceditnt.MyFilterSettingsActivity
 
+/**
+ * Настраиваемый фильтр.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object MyFilter {
+    /** Поле изображение */
     private lateinit var image: Bitmap
 
+    /**
+     * Функция, работающая с изображениями.
+     * @param input входящее изображение
+     * @return обработанное изображение
+     */
     fun make(input: Bitmap): Bitmap {
         image = input.copy(input.config, true)
         render()
         return image
     }
 
+    /**
+     * Функция обработки изображения.
+     */
     private fun render() {
         for (i in 0 until image.width) {
             for (j in 0 until image.height) {

@@ -15,7 +15,13 @@ import com.vladiknt.piceditnt.filters.MyFilter
 import kotlinx.coroutines.*
 import java.io.File
 
+/**
+ * Класс Activity, отвечающей за настройку параметров алгоритма.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 class MyFilterSettingsActivity : AppCompatActivity() {
+    /** Поле static поля */
     companion object {
         var kRedLow = 64
         var kGreenLow = 64
@@ -43,9 +49,14 @@ class MyFilterSettingsActivity : AppCompatActivity() {
         }
     }
 
+    /** Поле текущая задача */
     lateinit var processing: Deferred<Unit>
+    /** Поле активна ли задача */
     var active = false
 
+    /**
+     * Функция, вызываемая при создании Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_filter_settings)
@@ -93,6 +104,9 @@ class MyFilterSettingsActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Функция изменения значений ползунков и перерисовки preview.
+     */
     private val seekBarChangeListener: OnSeekBarChangeListener = object : OnSeekBarChangeListener {
         override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {}
         override fun onStartTrackingTouch(seekBar: SeekBar) {}
@@ -121,6 +135,9 @@ class MyFilterSettingsActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Функция сохранения параметров алгоритма.
+     */
     fun saveInfo(view: View?) {
         val saver = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE).edit()
         saver.putInt("RL", kRedLow)
@@ -136,6 +153,9 @@ class MyFilterSettingsActivity : AppCompatActivity() {
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
     }
 
+    /**
+     * Функция сброса параметров алгоритма.
+     */
     fun resetInfo(view: View?) {
         kRedLow = 64
         kGreenLow = 64

@@ -20,11 +20,20 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.InputStream
 
-
+/**
+ * Класс Activity, отвечающей за обработку изображений.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 class DrawActivity : AppCompatActivity() {
-    var scale = 4
+    /** Поле масштабирование */
+    var scale = 1
+    /** Поле изображение */
     private var selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
 
+    /**
+     * Функция, вызываемая при создании Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_draw)
@@ -33,17 +42,35 @@ class DrawActivity : AppCompatActivity() {
         MyFilterSettingsActivity.loadInfo()
     }
 
+    /**
+     * Функция, вызываемая по нажатию кнопки настройки фильтра.
+     * Создает новую Activity для настройки параметров фильтра.
+     * @see MyFilterSettingsActivity
+     */
     fun myFilterSettingsButton(view: View?) {
         val intent = Intent(this, MyFilterSettingsActivity::class.java)
         startActivity(intent)
     }
 
+    /**
+     * Функция выбора изображения из памяти устройства.
+     */
     fun pickImage(view: View?) {
         val getPic = Intent(Intent.ACTION_PICK)
         getPic.type = "image/*"
         startActivityForResult(getPic, 1)
     }
 
+    /**
+     * Функция обработки изображения выбранным фильтром.
+     * @see BlackWhiteFilter
+     * @see CircuitFilter
+     * @see ColorShiftsFilter
+     * @see CyberpunkFilter
+     * @see DefocusingFilter
+     * @see MyFilter
+     * @see PixelFilter
+     */
     fun processImage(view: View?) {
         try {
             val imageView = findViewById<ImageView>(R.id.imageSrc)
@@ -78,6 +105,9 @@ class DrawActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Функция сохранения изображения в память устройства.
+     */
     fun saveImage(view: View?) {
         if (selectedImage.height == 1) {
             Toast.makeText(this, "Pick image firstly", Toast.LENGTH_SHORT).show()
@@ -87,6 +117,10 @@ class DrawActivity : AppCompatActivity() {
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
     }
 
+    /**
+     * Функция, вызываемая после возвращения в данную Activity.
+     * @see DrawActivity.pickImage
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val imageView = findViewById<ImageView>(R.id.imageSrc)

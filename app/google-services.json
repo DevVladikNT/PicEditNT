@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "793535856588",
+    "project_id": "piceditnt",
+    "storage_bucket": "piceditnt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793535856588:android:c34ddcdc7b3a2d13fc2769",
+        "android_client_info": {
+          "package_name": "com.vladiknt.piceditnt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793535856588-rumkvaainjt2p3c1ghb28o9pr68bata7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrIUkuBMZvgxth35IPtkZlMPemIt2yU8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793535856588-rumkvaainjt2p3c1ghb28o9pr68bata7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

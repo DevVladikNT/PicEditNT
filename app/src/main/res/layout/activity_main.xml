@@ -1,282 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimaryVariant"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/findUserButton"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/buttons_style_p"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-        <LinearLayout
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="User nickname" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/buttons_style_a"
+            android:gravity="center"
+            android:text="Find"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttons_style_p"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@color/dayColorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/userNickname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Nickname"
+            android:textSize="24sp" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/userPhoto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
-                    <ImageView
-                        android:id="@+id/BlackWhite"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/black_white" />
+                <ImageView
+                    android:id="@+id/userPhoto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="BlackWhite"
-                        android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/userPhoto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/userPhoto4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Circuit"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/circuit" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="Circuit"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/userPhoto5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="horizontal">
+        </HorizontalScrollView>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
+    </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/ColorShifts"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/color_shifts" />
+    <LinearLayout
+        android:id="@+id/makePhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/buttons_style_p"
+        android:elevation="4dp"
+        android:padding="8dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="ColorShifts"
-                        android:textSize="20sp" />
+        <TextView
+            android:onClick="chooseFilter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Make photo"
+            android:textSize="20sp" />
 
-                </LinearLayout>
+    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Defocusing"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/defocusing" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="Defocusing"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Cyberpunk"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cyberpunk" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="Cyberpunk"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Pixel"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/pixel"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="Pixel"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/sdf"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="sdf"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_info_bottom"
-                    android:elevation="4dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/MyFilter"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:onClick="setFilter"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/my_filter" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_info_bottom"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:text="MyFilter"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
+</LinearLayout>
