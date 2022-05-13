@@ -3,11 +3,17 @@
 This is my android app for editing pictures.
 
 It has some filters:
+- Pixel
+- Dark
+- Circuit
+- DarkYellow
+- Neon
 - BlackWhite
+- Lining
 - ColorShifts
-- Cyberpunk
 - Defocusing
-- Circuiting image
+- Cyberpunk
+- Petrol
 
 Moreover, you can setup your own filter.
 
