@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:hint="User nickname" />
+            android:hint="User id" />
 
         <TextView
             android:layout_width="80dp"
@@ -55,10 +55,20 @@
         <TextView
             android:id="@+id/userNickname"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Nickname"
             android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:onClick="copyId"
+            android:text="id: 1234512345123451234512345"
+            android:textSize="12sp" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -110,10 +120,10 @@
         android:padding="8dp">
 
         <TextView
-            android:onClick="chooseFilter"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
+            android:onClick="chooseFilter"
             android:text="Make photo"
             android:textSize="20sp" />
 

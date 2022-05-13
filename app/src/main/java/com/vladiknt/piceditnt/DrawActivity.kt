@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
 import android.provider.MediaStore.Images
 import android.util.Log
 import android.view.View
@@ -16,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.scale
 import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
-import java.io.File
 import java.io.FileNotFoundException
 import java.io.InputStream
 
@@ -67,8 +65,13 @@ class DrawActivity : AppCompatActivity() {
      * @see CircuitFilter
      * @see ColorShiftsFilter
      * @see CyberpunkFilter
+     * @see DarkFilter
+     * @see DarkYellowFilter
      * @see DefocusingFilter
+     * @see LiningFilter
      * @see MyFilter
+     * @see NeonFilter
+     * @see PetrolFilter
      * @see PixelFilter
      */
     fun processImage(view: View?) {
@@ -87,8 +90,13 @@ class DrawActivity : AppCompatActivity() {
                         "Circuit" -> CircuitFilter.make(scaledSelectedImage)
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
+                        "Dark" -> DarkFilter.make(scaledSelectedImage)
+                        "DarkYellow" -> DarkYellowFilter.make(scaledSelectedImage)
                         "Defocusing" -> DefocusingFilter.make(scaledSelectedImage)
+                        "Lining" -> LiningFilter.make(scaledSelectedImage)
                         "My" -> MyFilter.make(scaledSelectedImage)
+                        "Neon" -> NeonFilter.make(scaledSelectedImage)
+                        "Petrol" -> PetrolFilter.make(scaledSelectedImage)
                         "Pixel" -> PixelFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }

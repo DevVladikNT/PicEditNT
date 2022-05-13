@@ -4,7 +4,10 @@ import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.TextureView
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.vladiknt.piceditnt.MyFilterSettingsActivity.Companion.APP_PREFERENCES
 
@@ -35,12 +38,25 @@ class FiltersActivity : AppCompatActivity() {
             R.id.Circuit -> "Circuit"
             R.id.ColorShifts -> "ColorShifts"
             R.id.Cyberpunk -> "Cyberpunk"
+            R.id.Dark -> "Dark"
+            R.id.DarkYellow -> "DarkYellow"
             R.id.Defocusing -> "Defocusing"
+            R.id.Lining -> "Lining"
             R.id.MyFilter -> "My"
+            R.id.Neon -> "Neon"
+            R.id.Petrol -> "Petrol"
             R.id.Pixel -> "Pixel"
             else -> ""
         }
         act.putExtra("filterName", filterName)
         startActivity(act, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+    }
+
+    /**
+     * Функция, раскрывающая остальную часть фильтров.
+     */
+    fun showOtherFilters(view: View?) {
+        findViewById<TextView>(R.id.showButton).visibility = View.GONE
+        findViewById<LinearLayout>(R.id.otherFilters).visibility = View.VISIBLE
     }
 }

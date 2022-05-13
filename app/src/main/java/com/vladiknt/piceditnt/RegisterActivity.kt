@@ -80,7 +80,9 @@ class RegisterActivity : AppCompatActivity() {
                         db!!.collection("users").document(mAuth!!.currentUser!!.uid).set(userInfo)
                             .addOnCompleteListener { task1: Task<Void?> ->
                                 if (task1.isSuccessful) {
-                                    //
+                                    mAuth!!.currentUser!!.sendEmailVerification()
+                                    Toast.makeText(this, "Please, activate your profile in letter", Toast.LENGTH_SHORT).show()
+                                    finish()
                                 } else Toast.makeText(this, "Error while adding user info", Toast.LENGTH_SHORT).show()
                             }
                     } else Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
