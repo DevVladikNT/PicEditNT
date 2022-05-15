@@ -23,18 +23,21 @@
     </HorizontalScrollView>
 
     <TextView
-        android:onClick="myFilterSettingsButton"
         android:id="@+id/MyFilterEdit"
-        android:visibility="invisible"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="Edit Filter"
-        android:layout_alignParentEnd="true"
-        android:elevation="4dp"
-        android:layout_margin="8dp"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:background="@drawable/buttons_style_p"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/buttons_style_p"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:onClick="myFilterSettingsButton"
+        android:text="Edit Filter"
+        android:textSize="20sp"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:layout_width="match_parent"

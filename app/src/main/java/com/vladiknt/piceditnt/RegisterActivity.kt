@@ -72,6 +72,11 @@ class RegisterActivity : AppCompatActivity() {
         // Подготовка файлов пользователя для добавления в БД
         val userInfo: MutableMap<String, Any> = HashMap()
         userInfo["nickname"] = nickname
+        userInfo["img1"] = ""
+        userInfo["img2"] = ""
+        userInfo["img3"] = ""
+        userInfo["img4"] = ""
+        userInfo["img5"] = ""
         // Регистрация
         if (pass1 == pass2) {
             mAuth!!.createUserWithEmailAndPassword(email, pass1)

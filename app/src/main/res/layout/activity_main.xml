@@ -43,7 +43,7 @@
         android:background="@drawable/buttons_style_p"
         android:elevation="4dp"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/userAvatar"
@@ -68,7 +68,8 @@
             android:gravity="center"
             android:onClick="copyId"
             android:text="id: 1234512345123451234512345"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp"/>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -82,27 +83,41 @@
                 <ImageView
                     android:id="@+id/userPhoto1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="16dp"/>
 
                 <ImageView
                     android:id="@+id/userPhoto2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="16dp"/>
 
                 <ImageView
                     android:id="@+id/userPhoto3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="16dp"/>
 
                 <ImageView
                     android:id="@+id/userPhoto4"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="16dp"/>
 
                 <ImageView
                     android:id="@+id/userPhoto5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
 
             </LinearLayout>
 
