@@ -10,10 +10,7 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.appcheck.FirebaseAppCheck
@@ -34,11 +31,7 @@ import kotlinx.coroutines.*
 class MainActivity : AppCompatActivity() {
     private var db: FirebaseFirestore? = null
     private var user: FirebaseUser? = null
-    private var imgPath1 = ""
-    private var imgPath2 = ""
-    private var imgPath3 = ""
-    private var imgPath4 = ""
-    private var imgPath5 = ""
+    private var uid = ""
 
     /**
      * Функция, вызываемая при создании Activity.
@@ -56,28 +49,40 @@ class MainActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         user = FirebaseAuth.getInstance().currentUser
 
+        if (intent.getStringExtra("id") != null) {
+            uid = intent.getStringExtra("id")!!
+            findViewById<LinearLayout>(R.id.findUserButton).visibility = View.GONE
+            findViewById<LinearLayout>(R.id.makePhotoButton).visibility = View.GONE
+        } else
+            uid = user!!.uid
+
         // Получаем информацию о пользователе
         val userNickname = findViewById<TextView>(R.id.userNickname)
         val userId = findViewById<TextView>(R.id.userId)
-        db!!.collection("users").document(user!!.uid).get()
+        db!!.collection("users").document(uid).get()
             .addOnCompleteListener { task: Task<DocumentSnapshot?> ->
                 if (task.isSuccessful) {
                     val getDoc = task.result
                     val nick = getDoc!!["nickname"].toString()
-                    imgPath1 = getDoc["img1"].toString()
-                    imgPath2 = getDoc["img2"].toString()
-                    imgPath3 = getDoc["img3"].toString()
-                    imgPath4 = getDoc["img4"].toString()
-                    imgPath5 = getDoc["img5"].toString()
-                    Toast.makeText(this, imgPath1, Toast.LENGTH_SHORT).show()
+                    val avatarPath = getDoc["avatar"].toString()
+                    val imgPath1 = getDoc["img1"].toString()
+                    val imgPath2 = getDoc["img2"].toString()
+                    val imgPath3 = getDoc["img3"].toString()
+                    val imgPath4 = getDoc["img4"].toString()
+                    val imgPath5 = getDoc["img5"].toString()
 
                     userNickname.clearComposingText()
                     userNickname.text = nick
                     userId.clearComposingText()
-                    userId.text = "id: ${user!!.uid}"
+                    userId.text = "id: $uid"
 
                     // Загрузка изображений в фоне
                     val THREE_MEGABYTES = (3 * 1024 * 1024).toLong()
+                    FirebaseStorage.getInstance().reference.child(avatarPath).getBytes(THREE_MEGABYTES)
+                        .addOnSuccessListener { bytesPrm: ByteArray ->
+                            val bitmap = BitmapFactory.decodeByteArray(bytesPrm, 0, bytesPrm.size)
+                            findViewById<ImageView>(R.id.userAvatar).setImageBitmap(bitmap)
+                        }
                     FirebaseStorage.getInstance().reference.child(imgPath1).getBytes(THREE_MEGABYTES)
                         .addOnSuccessListener { bytesPrm: ByteArray ->
                             val bitmap = BitmapFactory.decodeByteArray(bytesPrm, 0, bytesPrm.size)
@@ -125,5 +130,15 @@ class MainActivity : AppCompatActivity() {
         val clip = ClipData.newPlainText("", (view as TextView).text.split(" ")[1])
         clipboard.setPrimaryClip(clip)
         Toast.makeText(this, "User`s ID was copied", Toast.LENGTH_SHORT).show()
+    }
+
+    /**
+     * Функция, которая ищет пользователя по id.
+     */
+    fun findUser(view: View?) {
+        val id = findViewById<EditText>(R.id.userIdField).text.toString()
+        val act = Intent(this, MainActivity::class.java)
+        act.putExtra("id", id)
+        startActivity(act, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 }

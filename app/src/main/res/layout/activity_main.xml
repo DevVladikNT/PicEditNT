@@ -19,6 +19,7 @@
         android:padding="8dp">
 
         <EditText
+            android:id="@+id/userIdField"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -31,7 +32,8 @@
             android:background="@drawable/buttons_style_a"
             android:gravity="center"
             android:text="Find"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="findUser"/>
 
     </LinearLayout>
 
@@ -50,7 +52,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:background="@color/dayColorPrimaryDark" />
+            android:background="@color/dayColorPrimaryDark"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/userNickname"
@@ -58,18 +61,18 @@
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Nickname"
+            android:text=""
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/userId"
             android:layout_width="match_parent"
             android:layout_height="20dp"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
             android:onClick="copyId"
-            android:text="id: 1234512345123451234512345"
-            android:textSize="12sp"
-            android:layout_marginBottom="16dp"/>
+            android:text=""
+            android:textSize="12sp" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -84,40 +87,40 @@
                     android:id="@+id/userPhoto1"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
+                    android:layout_marginEnd="16dp"
                     android:adjustViewBounds="true"
-                    android:layout_marginEnd="16dp"/>
+                    android:scaleType="fitXY" />
 
                 <ImageView
                     android:id="@+id/userPhoto2"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
+                    android:layout_marginEnd="16dp"
                     android:adjustViewBounds="true"
-                    android:layout_marginEnd="16dp"/>
+                    android:scaleType="fitXY" />
 
                 <ImageView
                     android:id="@+id/userPhoto3"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
+                    android:layout_marginEnd="16dp"
                     android:adjustViewBounds="true"
-                    android:layout_marginEnd="16dp"/>
+                    android:scaleType="fitXY" />
 
                 <ImageView
                     android:id="@+id/userPhoto4"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
+                    android:layout_marginEnd="16dp"
                     android:adjustViewBounds="true"
-                    android:layout_marginEnd="16dp"/>
+                    android:scaleType="fitXY" />
 
                 <ImageView
                     android:id="@+id/userPhoto5"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY" />
 
             </LinearLayout>
 
