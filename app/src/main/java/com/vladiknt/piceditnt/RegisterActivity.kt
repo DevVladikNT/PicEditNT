@@ -61,28 +61,30 @@ class RegisterActivity : AppCompatActivity() {
         // Проверка пароля
         // TODO доделать
         var correctPassword = false
-        et = findViewById(R.id.regPass1)
-        if (et.toString().length >= 8 && et.toString().toLowerCase() != et.toString() && et.toString().toUpperCase() != et.toString())
+        if (pass1.length >= 8 && pass1.toLowerCase() != pass1 && pass1.toUpperCase() != pass1)
             correctPassword = true
         if(!correctPassword) {
             Toast.makeText(this, "Weak password", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Подготовка файлов пользователя для добавления в БД
-        val userInfo: MutableMap<String, Any> = HashMap()
-        userInfo["nickname"] = nickname
-        userInfo["img1"] = ""
-        userInfo["img2"] = ""
-        userInfo["img3"] = ""
-        userInfo["img4"] = ""
-        userInfo["img5"] = ""
         // Регистрация
-        if (pass1 == pass2) {
+        if (pass1 == pass2 && correctPassword) {
             mAuth!!.createUserWithEmailAndPassword(email, pass1)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        db!!.collection("users").document(mAuth!!.currentUser!!.uid).set(userInfo)
+                        // Подготовка файлов пользователя для добавления в БД
+                        val uid = mAuth!!.currentUser!!.uid
+                        val userInfo: MutableMap<String, Any> = HashMap()
+                        userInfo["nickname"] = nickname
+                        userInfo["avatar"] = "avatar/${uid}a.jpg"
+                        userInfo["img1"] = "photo/${uid}1.jpg"
+                        userInfo["img2"] = "photo/${uid}2.jpg"
+                        userInfo["img3"] = "photo/${uid}3.jpg"
+                        userInfo["img4"] = "photo/${uid}4.jpg"
+                        userInfo["img5"] = "photo/${uid}5.jpg"
+
+                        db!!.collection("users").document(uid).set(userInfo)
                             .addOnCompleteListener { task1: Task<Void?> ->
                                 if (task1.isSuccessful) {
                                     mAuth!!.currentUser!!.sendEmailVerification()

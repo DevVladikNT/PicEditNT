@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
+import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
 import java.io.InputStream
 
@@ -125,14 +126,17 @@ class DrawActivity : AppCompatActivity() {
      * Функция сохранения изображения в память устройства.
      */
     fun saveImage(view: View?) {
+        if (selectedImage.height == 1) {
+            Toast.makeText(this, "Pick image firstly", Toast.LENGTH_SHORT).show()
+            return
+        }
         if (mUser != null) {
             val act = Intent(this, SaveActivity::class.java)
+            val stream = ByteArrayOutputStream()
+            selectedImage.compress(Bitmap.CompressFormat.JPEG, 50, stream)
+            act.putExtra("image", stream.toByteArray())
             startActivity(act)
         } else {
-            if (selectedImage.height == 1) {
-                Toast.makeText(this, "Pick image firstly", Toast.LENGTH_SHORT).show()
-                return
-            }
             Images.Media.insertImage(
                 contentResolver,
                 selectedImage,

@@ -19,37 +19,62 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/userPhoto1"
-                android:layout_width="match_parent"
+                android:minHeight="50dp"
+                android:background="@color/dayColorAccent"
+                android:id="@+id/savePhoto1"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="saveInCloud"/>
 
             <ImageView
-                android:id="@+id/userPhoto2"
-                android:layout_width="match_parent"
+                android:minHeight="50dp"
+                android:background="@color/dayColorAccent"
+                android:id="@+id/savePhoto2"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="saveInCloud"/>
 
             <ImageView
-                android:id="@+id/userPhoto3"
-                android:layout_width="match_parent"
+                android:minHeight="50dp"
+                android:background="@color/dayColorAccent"
+                android:id="@+id/savePhoto3"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="saveInCloud"/>
 
             <ImageView
-                android:id="@+id/userPhoto4"
-                android:layout_width="match_parent"
+                android:minHeight="50dp"
+                android:background="@color/dayColorAccent"
+                android:id="@+id/savePhoto4"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="saveInCloud"/>
 
             <ImageView
-                android:id="@+id/userPhoto5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:minHeight="50dp"
+                android:background="@color/dayColorAccent"
+                android:id="@+id/savePhoto5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="saveInCloud"/>
 
         </LinearLayout>
 
@@ -63,6 +88,7 @@
         android:elevation="4dp"
         android:gravity="center"
         android:text="Save in gallery"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:onClick="saveImage"/>
 
 </LinearLayout>

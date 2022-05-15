@@ -53,7 +53,8 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:background="@color/dayColorPrimaryDark"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:onClick="changeAvatar" />
 
         <TextView
             android:id="@+id/userNickname"

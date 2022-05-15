@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,6 +23,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.vladiknt.piceditnt.filters.*
 import kotlinx.coroutines.*
+import java.io.ByteArrayOutputStream
+import java.io.FileNotFoundException
+import java.io.InputStream
 
 /**
  * Класс Activity с информацией о пользователе.
@@ -113,6 +117,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
+     * Функция, позволяющая сменить аватар пользователя.
+     */
+    fun changeAvatar(view: View?) {
+        if (user!!.uid == uid) pickImage(null)
+    }
+
+    /**
+     * Функция выбора изображения из памяти устройства.
+     */
+    fun pickImage(view: View?) {
+        val getPic = Intent(Intent.ACTION_PICK)
+        getPic.type = "image/*"
+        startActivityForResult(getPic, 1)
+    }
+
+    /**
      * Функция, вызываемая по нажатию кнопки "Make photo".
      * Переводит пользователя в Activity для выбора фильтра.
      * @see FiltersActivity
@@ -140,5 +160,35 @@ class MainActivity : AppCompatActivity() {
         val act = Intent(this, MainActivity::class.java)
         act.putExtra("id", id)
         startActivity(act, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+    }
+
+    /**
+     * Функция, вызываемая после возвращения в данную Activity.
+     * @see MainActivity.pickImage
+     */
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        var selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
+        val imageView = findViewById<ImageView>(R.id.imageSrc)
+        var imageStream: InputStream? = null
+        if (requestCode == 1) {
+            try {
+                if (data != null) {
+                    val imageUri: Uri? = data.data
+                    imageStream = imageUri?.let { contentResolver.openInputStream(it) }
+                    val stream = ByteArrayOutputStream()
+                    selectedImage = BitmapFactory.decodeStream(imageStream)
+                    selectedImage.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+
+                    FirebaseStorage.getInstance().reference.child("avatar/${uid}a.jpg").putBytes(stream.toByteArray())
+                        .addOnSuccessListener {
+                            imageView.setImageBitmap(selectedImage)
+                            Toast.makeText(this, "Image was successfully uploaded", Toast.LENGTH_SHORT).show()
+                        }
+                }
+            } catch (e: FileNotFoundException) {
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
