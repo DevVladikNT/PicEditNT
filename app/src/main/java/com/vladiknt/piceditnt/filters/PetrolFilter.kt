@@ -5,6 +5,11 @@ import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 
+/**
+ * Фильтр, создающий разноцветные пятна.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object PetrolFilter {
     /** Поле изображение */
     private lateinit var image: Bitmap

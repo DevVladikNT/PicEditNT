@@ -33,8 +33,11 @@ import java.io.InputStream
  * @version 1.0
  */
 class MainActivity : AppCompatActivity() {
+    /** Поле для доступа к Firebase */
     private var db: FirebaseFirestore? = null
+    /** Поле для доступа к Firebase */
     private var user: FirebaseUser? = null
+    /** Поле id пользователя */
     private var uid = ""
 
     /**

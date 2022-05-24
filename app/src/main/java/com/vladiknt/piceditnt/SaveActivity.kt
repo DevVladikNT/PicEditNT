@@ -29,10 +29,14 @@ import java.io.ByteArrayOutputStream
 class SaveActivity : AppCompatActivity() {
     /** Поле изображение */
     private var selectedImage = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
-
+    /** Поле для доступа к Firebase */
     private var user: FirebaseUser? = null
+    /** Поле id пользователя */
     private var uid = ""
 
+    /**
+     * Функция, вызываемая при создании Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_save)

@@ -6,6 +6,12 @@ import androidx.core.graphics.get
 import androidx.core.graphics.set
 import kotlin.math.abs
 
+/**
+ * Фильтр, выравнивающий цвета на изображении.
+ * Темные участки высветляются, светлые - затемняются.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object LiningFilter {
     /** Поле изображение */
     private lateinit var image: Bitmap

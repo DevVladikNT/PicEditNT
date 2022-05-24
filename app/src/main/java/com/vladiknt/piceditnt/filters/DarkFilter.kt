@@ -6,6 +6,12 @@ import androidx.core.graphics.get
 import androidx.core.graphics.set
 import kotlin.math.abs
 
+/**
+ * Фильтр для затемнения изображения.
+ * Улучшенный "негатив"-фильтр.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object DarkFilter {
     /** Поле изображение */
     private lateinit var image: Bitmap

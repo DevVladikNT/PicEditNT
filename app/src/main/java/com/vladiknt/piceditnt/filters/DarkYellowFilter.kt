@@ -5,6 +5,11 @@ import android.graphics.Color
 import androidx.core.graphics.get
 import androidx.core.graphics.set
 
+/**
+ * Фильтр, использующий черные и желтые оттенки.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 object DarkYellowFilter {
     /** Поле изображение */
     private lateinit var image: Bitmap

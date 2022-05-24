@@ -18,10 +18,20 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
 
+/**
+ * Класс Activity для регистрации учетной записи.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 class RegisterActivity : AppCompatActivity() {
+    /** Поле для доступа к Firebase */
     private var mAuth: FirebaseAuth? = null
+    /** Поле для доступа к Firebase */
     private var db: FirebaseFirestore? = null
 
+    /**
+     * Функция, вызываемая при создании Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -48,6 +58,9 @@ class RegisterActivity : AppCompatActivity() {
 //        startActivity(lic)
 //    }
 
+    /**
+     * Функция, проверяющая регистрационные данные.
+     */
     fun registerUser(view: View?) {
         var et = findViewById<EditText>(R.id.regMail)
         val email = et.text.toString()

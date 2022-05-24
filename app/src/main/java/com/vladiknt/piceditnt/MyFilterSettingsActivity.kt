@@ -21,7 +21,7 @@ import java.io.File
  * @version 1.0
  */
 class MyFilterSettingsActivity : AppCompatActivity() {
-    /** Поле static поля */
+    /** Static поля */
     companion object {
         var kRedLow = 64
         var kGreenLow = 64

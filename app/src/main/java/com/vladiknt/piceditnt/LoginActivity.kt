@@ -15,10 +15,20 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
+/**
+ * Класс Activity для входа в профиль.
+ * @autor Владислав Васильев
+ * @version 1.0
+ */
 class LoginActivity : AppCompatActivity() {
+    /** Поле для доступа к Firebase */
     private var mAuth: FirebaseAuth? = null
+    /** Поле для доступа к Firebase */
     private var mUser: FirebaseUser? = null
 
+    /**
+     * Функция, вызываемая при создании Activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
@@ -31,16 +41,25 @@ class LoginActivity : AppCompatActivity() {
         MyFilterSettingsActivity.pref = getSharedPreferences(MyFilterSettingsActivity.APP_PREFERENCES, Context.MODE_PRIVATE)
     }
 
+    /**
+     * Функция для входа в прилоежение в гостевом режиме.
+     */
     fun guestLogin(view: View?) {
         val reg = Intent(this, FiltersActivity::class.java)
         startActivity(reg, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
+    /**
+     * Функция для регистрации профиля.
+     */
     fun registerButton(view: View?) {
         val reg = Intent(this, RegisterActivity::class.java)
         startActivity(reg, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
     }
 
+    /**
+     * Функция для восстановления пароля.
+     */
     fun resetPasswordButton(view: View?) {
         val et = findViewById<EditText>(R.id.loginMail)
         if (et.text.toString() == "")
@@ -55,6 +74,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Функция для проверки введенных данных для входа.
+     */
     fun enterButton(view: View?) {
         var et = findViewById<EditText>(R.id.loginMail)
         val email = et.text.toString()
