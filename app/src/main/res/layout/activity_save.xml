@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimaryVariant"
-    tools:context=".SaveActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SaveActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_margin="8dp"
-        android:padding="16dp"
+        android:layout_weight="1"
         android:background="@drawable/buttons_style_p"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,58 +23,58 @@
             android:orientation="vertical">
 
             <ImageView
-                android:minHeight="50dp"
-                android:background="@color/dayColorAccent"
                 android:id="@+id/savePhoto1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:onClick="saveInCloud"/>
+                android:background="@color/dayColorAccent"
+                android:minHeight="50dp"
+                android:onClick="saveInCloud"
+                android:scaleType="fitXY" />
 
             <ImageView
-                android:minHeight="50dp"
-                android:background="@color/dayColorAccent"
                 android:id="@+id/savePhoto2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:onClick="saveInCloud"/>
+                android:background="@color/dayColorAccent"
+                android:minHeight="50dp"
+                android:onClick="saveInCloud"
+                android:scaleType="fitXY" />
 
             <ImageView
-                android:minHeight="50dp"
-                android:background="@color/dayColorAccent"
                 android:id="@+id/savePhoto3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:onClick="saveInCloud"/>
+                android:background="@color/dayColorAccent"
+                android:minHeight="50dp"
+                android:onClick="saveInCloud"
+                android:scaleType="fitXY" />
 
             <ImageView
-                android:minHeight="50dp"
-                android:background="@color/dayColorAccent"
                 android:id="@+id/savePhoto4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:onClick="saveInCloud"/>
+                android:background="@color/dayColorAccent"
+                android:minHeight="50dp"
+                android:onClick="saveInCloud"
+                android:scaleType="fitXY" />
 
             <ImageView
-                android:minHeight="50dp"
-                android:background="@color/dayColorAccent"
                 android:id="@+id/savePhoto5"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:onClick="saveInCloud"/>
+                android:background="@color/dayColorAccent"
+                android:minHeight="50dp"
+                android:onClick="saveInCloud"
+                android:scaleType="fitXY" />
 
         </LinearLayout>
 
@@ -87,8 +87,8 @@
         android:background="@drawable/buttons_style_p"
         android:elevation="4dp"
         android:gravity="center"
+        android:onClick="saveImage"
         android:text="Save in gallery"
-        android:textSize="20sp"
-        android:onClick="saveImage"/>
+        android:textSize="20sp" />
 
 </LinearLayout>

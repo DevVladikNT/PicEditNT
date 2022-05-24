@@ -118,22 +118,22 @@
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/buttons_style_p"
-        android:elevation="4dp"
-        android:layout_marginTop="8dp"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/enterForm"
         android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttons_style_p"
+        android:elevation="4dp"
         android:padding="8dp">
 
         <TextView
-            android:onClick="guestLogin"
-            android:gravity="center"
-            android:text="Enter as guest"
-            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="guestLogin"
+            android:text="Enter as guest"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

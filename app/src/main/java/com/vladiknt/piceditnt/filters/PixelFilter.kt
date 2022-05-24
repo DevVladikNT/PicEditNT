@@ -144,7 +144,7 @@ object PixelFilter {
             }
         }
 
-        return if (scalingImage.height > 256 && scalingImage.width > 256)
+        return if (scalingImage.height > 192 && scalingImage.width > 192)
             scaling(scalingImage)
         else
             scalingImage

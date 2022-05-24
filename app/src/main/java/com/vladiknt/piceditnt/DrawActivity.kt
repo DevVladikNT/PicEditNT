@@ -82,11 +82,12 @@ class DrawActivity : AppCompatActivity() {
      * @see NeonFilter
      * @see PetrolFilter
      * @see PixelFilter
+     * @see ScanDocFilter
      */
     fun processImage(view: View?) {
         try {
             val imageView = findViewById<ImageView>(R.id.imageSrc)
-            var scaledSelectedImage = selectedImage.scale(selectedImage.width/scale, selectedImage.height/scale)
+            val scaledSelectedImage = selectedImage.scale(selectedImage.width/scale, selectedImage.height/scale)
             Toast.makeText(this, "Wait please", Toast.LENGTH_SHORT).show()
             // Обрабатываем изображение
             val time = System.currentTimeMillis()
@@ -98,6 +99,7 @@ class DrawActivity : AppCompatActivity() {
                         "BlackWhite" -> BlackWhiteFilter.make(scaledSelectedImage)
                         "Circuit" -> CircuitFilter.make(scaledSelectedImage)
                         "ColorShifts" -> ColorShiftsFilter.make(scaledSelectedImage)
+                        "Contrast" -> ContrastFilter.make(scaledSelectedImage)
                         "Cyberpunk" -> CyberpunkFilter.make(scaledSelectedImage)
                         "Dark" -> DarkFilter.make(scaledSelectedImage)
                         "DarkYellow" -> DarkYellowFilter.make(scaledSelectedImage)
@@ -107,6 +109,7 @@ class DrawActivity : AppCompatActivity() {
                         "Neon" -> NeonFilter.make(scaledSelectedImage)
                         "Petrol" -> PetrolFilter.make(scaledSelectedImage)
                         "Pixel" -> PixelFilter.make(scaledSelectedImage)
+                        "ScanDoc" -> ScanDocFilter.make(scaledSelectedImage)
                         else -> selectedImage
                     }
                 }

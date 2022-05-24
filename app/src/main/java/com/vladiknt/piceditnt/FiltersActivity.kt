@@ -37,6 +37,7 @@ class FiltersActivity : AppCompatActivity() {
             R.id.BlackWhite -> "BlackWhite"
             R.id.Circuit -> "Circuit"
             R.id.ColorShifts -> "ColorShifts"
+            R.id.Contrast -> "Contrast"
             R.id.Cyberpunk -> "Cyberpunk"
             R.id.Dark -> "Dark"
             R.id.DarkYellow -> "DarkYellow"
@@ -46,6 +47,7 @@ class FiltersActivity : AppCompatActivity() {
             R.id.Neon -> "Neon"
             R.id.Petrol -> "Petrol"
             R.id.Pixel -> "Pixel"
+            R.id.ScanDoc -> "ScanDoc"
             else -> ""
         }
         act.putExtra("filterName", filterName)

@@ -126,13 +126,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/DarkYellow"
+                        android:id="@+id/Contrast"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:onClick="setFilter"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/dark_yellow" />
+                        android:src="@drawable/contrast" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                         android:background="@drawable/rounded_info_bottom"
                         android:gravity="center"
                         android:padding="4dp"
-                        android:text="DarkYellow"
+                        android:text="Contrast"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -162,13 +162,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/Neon"
+                        android:id="@+id/ScanDoc"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:onClick="setFilter"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/neon" />
+                        android:src="@drawable/scandoc" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -176,7 +176,7 @@
                         android:background="@drawable/rounded_info_bottom"
                         android:gravity="center"
                         android:padding="4dp"
-                        android:text="Neon"
+                        android:text="ScanDoc"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -355,6 +355,71 @@
                             android:gravity="center"
                             android:padding="4dp"
                             android:text="Defocusing"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/Neon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:onClick="setFilter"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/neon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_info_bottom"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="Neon"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_info_bottom"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/DarkYellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:onClick="setFilter"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dark_yellow" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_info_bottom"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="DarkYellow"
                             android:textSize="20sp" />
 
                     </LinearLayout>

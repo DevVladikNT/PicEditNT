@@ -9,208 +9,210 @@
 
     <ImageView
         android:id="@+id/settingsImageSrc"
-        android:src="@drawable/original_scaled"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/settingsPad"
         android:scaleType="centerCrop"
-        android:layout_above="@id/settingsPad"/>
+        android:src="@drawable/original_scaled" />
 
     <LinearLayout
-        android:background="@drawable/buttons_style_p"
         android:id="@+id/settingsPad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
         android:layout_margin="8dp"
+        android:background="@drawable/buttons_style_p"
         android:elevation="4dp"
+        android:orientation="vertical"
         android:padding="4dp">
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="RL"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/RL"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="GL"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/GL"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="BL"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/BL"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="RM"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/RM"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
-        </LinearLayout>
-        <LinearLayout
-        android:layout_marginStart="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="32dp"
-            android:layout_height="24dp"
-            android:text="GM"
-            android:textSize="18sp"
-            android:gravity="center"/>
-
-        <SeekBar
-            android:id="@+id/GM"
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:min="0"
-            android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
+                android:text="GM"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/GM"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:max="255"
+                android:min="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="24dp"
+                android:gravity="center"
                 android:text="BM"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/BM"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="RH"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/RH"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="GH"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/GH"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginStart="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="32dp"
                 android:layout_height="24dp"
+                android:gravity="center"
                 android:text="BH"
-                android:textSize="18sp"
-                android:gravity="center"/>
+                android:textSize="18sp" />
 
             <SeekBar
                 android:id="@+id/BH"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:min="0"
-                android:max="255"/>
+                android:max="255"
+                android:min="0" />
         </LinearLayout>
 
         <LinearLayout
@@ -221,24 +223,24 @@
             <TextView
                 android:id="@+id/resetSettings"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="50dp"
-                android:gravity="center"
                 android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="resetInfo"
                 android:text="Reset"
-                android:textSize="18sp"
-                android:onClick="resetInfo"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/applySettings"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="50dp"
-                android:gravity="center"
                 android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="saveInfo"
                 android:text="Apply"
-                android:textSize="18sp"
-                android:onClick="saveInfo"/>
+                android:textSize="18sp" />
 
         </LinearLayout>
 

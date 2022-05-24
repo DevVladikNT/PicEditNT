@@ -31,9 +31,9 @@
             android:layout_gravity="center"
             android:background="@drawable/buttons_style_a"
             android:gravity="center"
+            android:onClick="findUser"
             android:text="Find"
-            android:textSize="20sp"
-            android:onClick="findUser"/>
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -53,8 +53,8 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:background="@color/dayColorPrimaryDark"
-            android:scaleType="centerCrop"
-            android:onClick="changeAvatar" />
+            android:onClick="changeAvatar"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/userNickname"
